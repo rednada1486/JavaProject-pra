@@ -36,12 +36,13 @@
 <body>
 <body>
 		<%
-			HandleSQLite handleSqlite = new HandleSQLite();
+			
 			String LAT = request.getParameter("LAT");
 			String LNT = request.getParameter("LNT");
 			List<Wifi> result = new ArrayList<Wifi>();
 			boolean isEmpty = false;
 			if(LAT!=null && LNT != null){
+				HandleSQLite handleSqlite = new HandleSQLite();
 				handleSqlite.createWifiTableAgain();
 				result = handleSqlite.getNearByWifiInfo(Double.parseDouble(LAT), Double.parseDouble(LNT));
 				isEmpty = result.size()==0 ? true : false;
