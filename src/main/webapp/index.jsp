@@ -163,6 +163,9 @@
             }
             button.addEventListener("click",getLocation);
             
+            if(<%=isEmpty%>){
+            	alert("Open API 와이파이 정보 가져오기를 눌려주세요.");
+            }
             
             //form.addEventListener("submit",handleSubmit)
         </script>
